@@ -90,7 +90,7 @@ final class AzureStorageSettings {
     public static final AffixSetting<String> ENDPOINT_SUFFIX_SETTING = Setting.affixKeySetting(
         AZURE_CLIENT_PREFIX_KEY,
         "endpoint_suffix",
-        key -> Setting.simpleString(key, Property.NodeScope),
+        key -> Setting.simpleString(key, Property.NodeScope, Property.Dynamic),
         () -> ACCOUNT_SETTING
     );
 
